@@ -4,40 +4,204 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="theme-color" content="#667eea" />
+    
+    <!-- Primary Meta Tags -->
+    <title>SocialKit - Free Tools for YouTube, Instagram & Social Media Creators</title>
+    <meta name="title" content="SocialKit - Free Tools for YouTube, Instagram & Social Media Creators">
+    <meta name="description" content="Free social media tools for creators. YouTube thumbnail downloader, Instagram hashtag generator, Facebook post checker, text styler, emoji picker and more. No API required!">
+    <meta name="keywords" content="social media tools, youtube tools, instagram tools, free creator tools, thumbnail downloader, hashtag generator, text styler, emoji picker, title generator, social media marketing">
+    <meta name="author" content="SocialKit">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://socialkit.example.com/">
+    <meta property="og:title" content="SocialKit - Free Tools for Social Media Creators">
+    <meta property="og:description" content="Enhance your social media presence with free tools for YouTube, Instagram, Facebook, TikTok and Twitter. No API keys required!">
+    <meta property="og:image" content="https://socialkit.example.com/social-preview.jpg">
+    <meta property="og:site_name" content="SocialKit">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://socialkit.example.com/">
+    <meta property="twitter:title" content="SocialKit - Free Tools for Social Media Creators">
+    <meta property="twitter:description" content="Free social media tools for creators. YouTube, Instagram, Facebook tools and more. No API required!">
+    <meta property="twitter:image" content="https://socialkit.example.com/social-preview.jpg">
+    <meta property="twitter:creator" content="@socialkit">
+
+    <!-- Additional Meta Tags -->
+    <meta name="application-name" content="SocialKit">
+    <meta name="apple-mobile-web-app-title" content="SocialKit">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://socialkit.example.com/">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- App Icons -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SocialKit",
+      "description": "Free tools for social media creators including YouTube thumbnail downloader, Instagram hashtag generator, and more",
+      "url": "https://socialkit.example.com",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "YouTube Thumbnail Downloader",
+        "Instagram Hashtag Generator", 
+        "Text Styler",
+        "Emoji Picker",
+        "Title Generator",
+        "Title Capitalizer"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "SocialKit"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "SocialKit"
+      }
+    }
+    </script>
+
+    <!-- Additional Structured Data for Tools -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "SocialKit Free Tools",
+      "description": "Collection of free social media tools for content creators",
+      "itemListElement": [
+        {
+          "@type": "SoftwareApplication",
+          "position": 1,
+          "name": "YouTube Thumbnail Downloader",
+          "description": "Download high-quality thumbnails from any YouTube video",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web"
+        },
+        {
+          "@type": "SoftwareApplication", 
+          "position": 2,
+          "name": "Instagram Hashtag Generator",
+          "description": "Generate trending hashtags for maximum Instagram reach",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "position": 3, 
+          "name": "Text Styler",
+          "description": "Transform text with fancy Unicode styles and formatting",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Web"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics (Replace with your tracking ID) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_TRACKING_ID');
+    </script> -->
+
+    <style>
+      /* Critical CSS for loading state */
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        color: white;
+        flex-direction: column;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(255,255,255,0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 1s ease-in-out infinite;
+        margin-bottom: 20px;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+        <h1>SocialKit - Free Social Media Tools</h1>
+        <p>You need to enable JavaScript to run this app.</p>
+        <p>SocialKit provides free tools for YouTube, Instagram, Facebook, and other social media platforms.</p>
+      </div>
+    </noscript>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-spinner"></div>
+      <h2 style="margin: 0; font-weight: 600;">SocialKit</h2>
+      <p style="margin: 5px 0 0 0; opacity: 0.8; font-size: 14px;">Loading your free social media tools...</p>
+    </div>
+    
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    
+    <script>
+      // Hide loading screen when React app loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(function() {
+              loadingScreen.style.display = 'none';
+            }, 500);
+          }
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
